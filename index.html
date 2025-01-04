@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+        <head>
+            <title>Betch Builder</title>
+            <link
+                rel="stylesheet"
+                href="./style.css"
+            />
+            <link href="draganddrop.css" rel="stylesheet">
+            <script src="//code.jquery.com/jquery.min.js"></script>
+            <script src="draganddrop.js"></script>
+                
+            <script type='text/javascript'>
+              $(function() {
+                //grouped lists
+                $('ul.grouped').sortable({
+                  group: true
+                });
+        
+                //normal list
+                $('ul.normal').sortable({
+                  autocreate: true,
+                  update: function(evt) {
+                    console.log(JSON.stringify($(this).sortable('serialize')));
+                  }
+                });
+        
+                //remaining lists
+                $('ul.float, ul.inline').sortable({
+                  update: function(evt) {
+                    console.log(JSON.stringify($(this).sortable('serialize')));
+                  }
+                });
+        
+                //div list
+                $('.list.parent').sortable({container: '.list', nodes: ':not(.list)'});
+        
+                //draggable
+                $('.drag').draggable();
+                $('.draggables').draggable({delegate: 'button', placeholder: true});
+                $('.draghandle').draggable({handle: '.handle', placeholder: true});
+                $('.dragdrop').draggable({
+                  revert: true,
+                  placeholder: true,
+                  droptarget: '.drop',
+                  drop: function(evt, droptarget) {
+                    $(this).appendTo(droptarget).draggable('destroy');
+                  }
+                });
+        
+                //off switch
+                $('.off').on('click', function() {
+                  $('.sortable').each(function() { $(this).sortable('destroy'); });
+                  $('.draggable').each(function() { $(this).draggable('destroy'); });
+                });
+              });
+            </script>
+      
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+
+
+        </head> 
+ 
+        <body> 
+        
+<h1>build-a-betch</h1>
+            <h2>drag & assemble betches in the box below. </h2>
+            <p>kill time while you wait for mint day. mint your betch nft on 1/13/25 at <a href="https://betches.io">betches.io</a>.</p>
+            <div class="designhere" class="ui-corner-all ui-droppable"></div><br />
+  <!-- lips --></div><p>skintone</p>
+                <div class="skintone">
+                    <img class="drag" src="./assets/bodies/ivory-body.png" width="68px" height="134px">                    
+                    <img class="drag" src="./assets/bodies/SAND-body.png" width="68px" height="134px">
+                    <img class="drag" src="./assets/bodies/caramel-body.png" width="68px" height="134px">
+                    <img class="drag" src="./assets/bodies/almond-body.png" width="68px" height="134px">
+                    <img class="drag" src="./assets/bodies/espresso-body.png" width="68px" height="134px">
+                    <img class="drag" src="./assets/bodies/envy-body.png" width="68px" height="134px"><br />
+                    </div><br /></div>
+
+                    <div><p>speech bubbles</p>
+                    <div class="speech">
+                    <img class="drag" src="./assets/speech bubbles/just-a-friend.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/organic.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/pay-back.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/only-god.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/other-girls.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/vegan.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/tiktok.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/6FT.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/filters.png" width="72px" height="35px" >
+                    <img class="drag" src="./assets/speech bubbles/fun-drunk.png" width="72px" height="35px" >
+              </div></div></div>
+            </div>
+  <!-- lips --><p>hair styles</p>
+    <div class="lips">
+        <img class="drag" width="30px" height="28px;"  src="assets/hair/yellow-hair.png">
+        <img class="drag" width="30px" height="28px;"  src="assets/hair/pink-hair.png">
+        <img class="drag" width="28px" height="30px;"  src="assets/hair/brown-hair.png">
+        <img class="drag" width="28px" height="30px;"  src="assets/hair/black-hair.png">
+        <img class="drag" width="30px" height="28px;"  src="assets/hair/magenta-hair.png">
+        <img class="drag" width="30px" height="28px;"  src="assets/hair/lime-hair.png">
+        <img class="drag" width="30px" height="28px;"  src="assets/hair/purple-hair.png">
+        <img class="drag" width="30px" height="28px;"  src="assets/hair/red-hair.png">
+        <img class="drag" width="30px" height="28px;"  src="assets/hair/blue-hair.png">
+        <img class="drag" width="30px" height="28px;"  src="assets/hair/y2k-hair.png">
+        <img class="drag" width="27px" height="28px;"  src="assets/hair/purple-bob.png">
+        <img class="drag" width="27px" height="28px;"  src="assets/hair/blue-bob.png">
+        <img class="drag" width="27px" height="28px;"  src="assets/hair/teal-bob.png">
+        <img class="drag" width="27px" height="28px;"  src="assets/hair/red-bob.png">
+        <img class="drag" width="27px" height="28px;"  src="assets/hair/brown-bob.png">
+        <img class="drag" width="27px" height="28px;"  src="assets/hair/black-bob.png">
+        <img class="drag" width="30px" height="35px;"  src="assets/hair/blue-long-hair.png">
+        <img class="drag" width="30px" height="35px;"  src="assets/hair/pink-long-hair.png">
+        <img class="drag" width="28px" height="36px;"  src="assets/hair/brown-long-hair.png">
+        <img class="drag" width="28px" height="36px;"  src="assets/hair/black-long-hair.png">
+        <img class="drag" width="30px" height="35px;"  src="assets/hair/purple-long-hair.png">
+        <img class="drag" width="30px" height="35px;"  src="assets/hair/teal-long-hair.png">
+      </div></div>
+          <!-- necklaces --><div><p>outfits</p>
+          <div class="necklace">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/sweats-blue.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/sweats-magenta.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/sweats-teal.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/jeans-and-t-grey.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/jeans-and-t-red.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/jeans-and-t-black.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/kardash-grey.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/kardash-red.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/kardash-brown.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/flower-dress-blue.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/flower-dress-green.png">
+            <img class="drag" width="49px" height="97px;"  src="assets/outfits/flower-dress-pink.png">
+            <img class="drag" width="56px" height="109px;"  src="assets/outfits/school-uniform-navy.png">
+            <img class="drag" width="56px" height="109px;"  src="assets/outfits/school-uniform-green.png">
+            <img class="drag" width="56px" height="109px;"  src="assets/outfits/school-uniform-khaki.png">
+            <img class="drag" width="56px" height="109px;"  src="assets/outfits/oversize-t-white.png">
+            <img class="drag" width="56px" height="109px;"  src="assets/outfits/oversize-t-black.png">
+            <img class="drag" width="56px" height="109px;"  src="assets/outfits/oversize-t-lime.png">
+          </div></div>
+
+            <br />
+</div>
+
+            <!-- earrings --><p>purses</p>
+      <div class="earrings">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/brown-birkin.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/black-birkin.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/blue-birkin.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/red-birkin.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/orange-birkin.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/brown-purse.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/black-purse.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/pink-purse.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/purple-purse.png">
+        <img class="drag" width="33px" height="61px;"  src="assets/purses/red-purse.png">
+
+
+
+      </div></div>
+
+
+
+
+          
+
+        </body>
+
+
+
+
+
+
+
+
+
+</html>
