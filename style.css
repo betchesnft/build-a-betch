@@ -2,7 +2,7 @@ html {
     background: rgb(185, 242, 240);
 }
 h1 {
-    color: red;
+    color: rgb(255, 29, 183);
     font-family: 'VT323', monospace;
     text-align:left;
     position:relative;
@@ -248,13 +248,14 @@ p[draggable]{
     position:relative;
     flex-wrap: wrap;
     left: 10%;
-    margin: -20px;
-    width: 100%;
+    top: 10px;
+    margin: -30px;
+    width: 90%;
 }
 
 .furniture > .drag {
     display:flex;
-    margin: 0px;
+    margin: -5px;
 
 }
 
