@@ -94,14 +94,32 @@ p[draggable]{
     flex-direction: row;
     position:relative;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 0px;
     left: 3%;
     width: 95%;
 }
 
 .necklace > .drag {
     display:flex;
-    margin: 5px;
+    margin: 1px;
+
+  }
+
+
+  .outfits {
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    flex-wrap: wrap;
+    margin: -5px;
+    left: 3%;
+    top: 10px;
+    width: 95%;
+}
+
+.outfits > .drag {
+    display:flex;
+    margin: -8px;
 
   }
 .earrings {
@@ -150,12 +168,29 @@ p[draggable]{
     margin:-15px;
 
   }
+
+  .intimates {
+    display:flex;
+    position:relative;
+    flex-wrap: wrap;
+    left: 3%;
+    width: 100%;
+
+
+  }
+
+  .intimates > .drag {
+    display:flex;
+    margin:3px;
+
+  }
+
   .vices {
     display:flex;
     flex-direction: row;
     position:relative;
     flex-wrap: wrap;
-    margin:15px;
+    margin: 3px;
     left: 3%;
     width: 75%;
 }
@@ -207,28 +242,44 @@ p[draggable]{
 
   }
 
+
+  .furniture {
+    display:flex;
+    position:relative;
+    flex-wrap: wrap;
+    left: 10%;
+    margin: -20px;
+    width: 100%;
+}
+
+.furniture > .drag {
+    display:flex;
+    margin: 0px;
+
+}
+
 .skintone {
     display:flex;
     position:relative;
     flex-wrap: wrap;
-    left: 15%;
+    left: 10%;
     margin: -20px;
-    width: 90%;
+    width: 100%;
 }
 
 .skintone > .drag {
     display:flex;
-    margin: -20px;
-    top: 20px;
+    margin: -25px;
+    top: 30px;
 
 }
 .speech {
     display:flex;
     position:relative;
     flex-wrap: wrap;
-    left: 3%;
-    margin: 5px;
-    width: 65%;
+    left: 5%;
+    margin: 20px;
+    width: 95%;
 }
 
 .speech > .drag {
