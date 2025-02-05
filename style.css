@@ -247,18 +247,33 @@ p[draggable]{
     display:flex;
     position:relative;
     flex-wrap: wrap;
-    left: 10%;
-    top: 10px;
-    margin: -30px;
-    width: 90%;
+    left: 3%;
+    top: 20px;
+    margin: 10px;
+    width: 100%;
 }
 
 .furniture > .drag {
     display:flex;
-    margin: -5px;
+    margin: -1px;
 
 }
 
+.electronics {
+    display:flex;
+    position:relative;
+    flex-wrap: wrap;
+    left: 3%;
+    top: 20px;
+    margin: -10px;
+    width: 100%;
+}
+
+.electronics > .drag {
+    display:flex;
+    margin: 1px;
+
+}
 .skintone {
     display:flex;
     position:relative;
